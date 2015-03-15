@@ -1,9 +1,9 @@
-class Lgh(object):
-    @staticmethod
-    def name():
-        return "Johnson"
+from enum import Enum, unique
 
-class Lgh2(Lgh):
-    pass
+@unique
+class Lgh(Enum):
+    v1 = 1
+    v2 = "1"
 
-print Lgh.name()
+print Lgh.v1.name, Lgh.v1.value
+print Lgh.v2.name, Lgh.v2.value
