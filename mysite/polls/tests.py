@@ -15,7 +15,7 @@ def create_question(question_text, days):
                                    pub_date=time)
 
 # Create your tests here.
-class QuestionMethodTests(TestCase):
+class QuestionModelTests(TestCase):
 
     def test_was_published_recently_with_future_question(self):
         """
@@ -103,7 +103,7 @@ class QuestionViewTests(TestCase):
             ['<Question: Past question 2.>', '<Question: Past question 1.>']
         )
 
-class QuestionDetailTests(TestCase):
+class QuestionDetailViewTests(TestCase):
     def test_detail_view_with_a_future_question(self):
         """
         The detail view of a question with a pub_date in the future should
