@@ -1,3 +1,5 @@
 *.pyc
 *.swp
 *.beam
+package/django-polls/dist
+package/django-polls/django_polls.egg-info

@@ -1,9 +1,8 @@
-from enum import Enum, unique
+import os
 
-@unique
-class Lgh(Enum):
-    v1 = 1
-    v2 = "1"
+print __file__
+print os.path.abspath(__file__)
+print os.path.join(os.path.abspath(__file__), os.pardir)
+print os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir))
+print os.path.dirname(os.path.abspath(__file__))
 
-print Lgh.v1.name, Lgh.v1.value
-print Lgh.v2.name, Lgh.v2.value
