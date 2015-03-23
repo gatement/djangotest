@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polls.models import Question, Choice
+from polls.models import Question, Choice, Poll
 
 # Register your models here.
 class ChoiceInline(admin.TabularInline):
@@ -19,5 +19,9 @@ class QuestionAdmin(admin.ModelAdmin):
 class ChoiceAdmin(admin.ModelAdmin):
     raw_id_fields = ('question', )
 
+class PollAdmin(admin.ModelAdmin):
+    list_display = ('name', 'enabled')
+
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice, ChoiceAdmin)
+admin.site.register(Poll, PollAdmin)
